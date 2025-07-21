@@ -2,8 +2,8 @@
 """Export an employee's TODO list to CSV format"""
 
 import csv
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
