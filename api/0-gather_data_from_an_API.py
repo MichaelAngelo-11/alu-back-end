@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" Script that fetches and displays the TODO list progress for a given employee ID """
+
+"""
+Script that fetches and displays the TODO list progress
+for a given employee ID.
+"""
 
 import requests
 import sys
