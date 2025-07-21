@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Export an employee's TODO list to CSV format"""
 
-import requests
-import sys
 import csv
+import sys
+import requests
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -12,9 +12,10 @@ if __name__ == "__main__":
 
     employee_id = sys.argv[1]
     user_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-    todos_url = f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+    todos_url = (
+        f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+    )
 
-    # Fetch user and todo data
     user_response = requests.get(user_url).json()
     todos_response = requests.get(todos_url).json()
 
